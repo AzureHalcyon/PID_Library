@@ -21,13 +21,13 @@ float target = 100.0;
 
 int main()
 {
-    //pidº¯ÊıÁ¬½Ó
+    //pidå‡½æ•°è¿æ¥
     PID_Init(&PID_Example, 9600, 5000, 3, 1, 5, 0.3, 0.3, 100, 100,0.02,0.02, ErrorHandle | Integral_Limit | OutputFilter);
 
-    //ĞŞ¸Äkp ki kd
+    //ä¿®æ”¹kp ki kd
     PID_Example.PID_reset(&PID_Example, 3, 1, 0);
 
-    //¼ÆËã measureÎª±»¿Ø¶ÔÏó²âÁ¿Öµ
+    //è®¡ç®— measureä¸ºè¢«æ§å¯¹è±¡æµ‹é‡å€¼
     PID_Calculate(&PID_Example, measure, target);
 
     system("pause");
